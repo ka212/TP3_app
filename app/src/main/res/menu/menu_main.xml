@@ -1,0 +1,50 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.tp3.MainActivity">
+    <item
+        android:id="@+id/menu_sms"
+        android:icon="@android:drawable/sym_action_email"
+        android:title="SMS"
+        android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/smsnormal"
+                android:icon="@android:drawable/sym_action_email"
+                android:title="SMS normal" />
+            <item
+                android:id="@+id/smsurgence"
+                android:icon="@android:drawable/ic_dialog_alert"
+                android:title="SMS urgence" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_appel"
+        android:icon="@android:drawable/sym_action_call"
+        android:title="appel"
+        android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/appelnormal"
+                android:icon="@android:drawable/stat_sys_speakerphone"
+                android:title="appel normal" />
+            <item
+                android:id="@+id/appelurgence"
+                android:icon="@android:drawable/ic_dialog_alert"
+                android:title="appel urgence" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/camera"
+        android:title="camera" />
+
+    <item
+        android:id="@+id/quitter"
+        android:title="quitter" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

@@ -8,26 +8,13 @@
     tools:context=".WriteSMS">
 
     <EditText
-        android:id="@+id/num"
-        android:layout_width="351dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="124dp"
-        android:ems="10"
-        android:inputType="text"
-        android:digits="0123456789"
-        android:hint="Entrez le numero"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/message"
         android:layout_width="307dp"
         android:layout_height="132dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
-        android:inputType="text"
         android:hint="Entrez le message"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num" />
@@ -41,4 +28,17 @@
         android:text="confirmer SMS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <EditText
+        android:id="@+id/num"
+        android:layout_width="318dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="entrez le numero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

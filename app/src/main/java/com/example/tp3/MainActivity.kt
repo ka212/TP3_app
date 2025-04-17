@@ -90,9 +90,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-
-
-
+            R.id.quitter->{
+                finish()
+                return true
+            }
             R.id.smsurgence -> {
                 sendEmergencySMS()
                 return true
@@ -116,6 +117,7 @@ class MainActivity : AppCompatActivity() {
 
         if (allPermissionsGranted) {
             sendSMS(phone, message)
+
         } else {
             ActivityCompat.requestPermissions(
                 this,
@@ -126,7 +128,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendSMS(phoneNumber: String, message: String) {
-        try {
             val smsManager: SmsManager = SmsManager.getDefault()
             smsManager.sendTextMessage(
                 phoneNumber,
@@ -136,9 +137,6 @@ class MainActivity : AppCompatActivity() {
                 null
             )
             Toast.makeText(this, "SMS d'urgence envoyé", Toast.LENGTH_SHORT).show()
-        } catch (e: Exception) {
-            Toast.makeText(this, "Échec d'envoi du SMS: ${e.message}", Toast.LENGTH_LONG).show()
-        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
